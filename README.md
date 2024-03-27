@@ -2,7 +2,9 @@
 
 ## ℹ️Overview
 
-The goal of setting up a Suricata home-lab is to gain practical experience in deploying and configuring an Intrusion Detection System (IDS) for network security monitoring. Suricata is an open-source IDS capable of detecting and preventing various network-based threats. This home-lab provides individuals with hands-on experience in setting up, configuring, and utilizing Suricata to enhance network security.   
+The goal of setting up a Suricata home-lab is to gain practical experience in deploying and configuring an Intrusion Detection System (IDS) for network security monitoring. Suricata is an open-source IDS capable of detecting and preventing various network-based threats. This home-lab provides individuals with hands-on experience in setting up, configuring, and utilizing Suricata to enhance network security.  
+![Blue Sand White Beach Simple Watercolor Etsy Shop Banner (2)](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab/assets/40385860/328b7120-7f15-4436-9885-de6ffbcb8063)
+
 In this home-lab, we will cover:
 - [Requirement](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#requirements)
 - [Lab Diagram](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#%EF%B8%8Flab-diagram)
