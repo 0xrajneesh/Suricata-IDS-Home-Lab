@@ -4,6 +4,12 @@
 
 The goal of setting up a Suricata home-lab is to gain practical experience in deploying and configuring an Intrusion Detection System (IDS) for network security monitoring. Suricata is an open-source IDS capable of detecting and preventing various network-based threats. This home-lab provides individuals with hands-on experience in setting up, configuring, and utilizing Suricata to enhance network security.   
 In this home-lab, we will cover:
+- [Requirement](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#requirements)
+- [Lab Diagram](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#%EF%B8%8Flab-diagram)
+- [Setting up the Suricata Home-Lab](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#-setting-up-the-suricata-home-lab)
+- [Excercises- Network-based attacks](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#excercises--network-based-attacks)
+- [Excercises- Web-based attacks](https://github.com/0xrajneesh/Suricata-IDS-Home-Lab?tab=readme-ov-file#excercises--web-based-attacks)
+- Need Training?
 
 
 ## 🧮Requirements
@@ -60,6 +66,7 @@ In this home-lab, we will cover:
 - **Metasploit Cross-Site Request Forgery (CSRF) Detection**: Formulate a Suricata rule to detect Metasploit CSRF attacks by monitoring for unexpected or unauthorized HTTP requests originating from victim hosts.
 - **Metasploit Authentication Bypass Detection**: Develop a Suricata rule to detect Metasploit authentication bypass attempts by monitoring for HTTP requests with bypass techniques (e.g., parameter manipulation, session fixation).  
 
+## Need Training
 
 
 
