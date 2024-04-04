@@ -6,3 +6,29 @@ sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt-get update
 sudo apt-get install suricata -y
 ```
+
+2. Download and extract the Emerging Threats Suricata ruleset:
+```
+cd /tmp/ && curl -LO https://rules.emergingthreats.net/open/suricata-6.0.8/emerging.rules.tar.gz
+sudo tar -xvzf emerging.rules.tar.gz && sudo mv rules/*.rules /etc/suricata/rules/
+sudo chmod 640 /etc/suricata/rules/*.rules
+```
+
+3. Modify Suricata settings in the /etc/suricata/suricata.yaml file and set the following variables:
+```JavaScript
+HOME_NET: "<UBUNTU_IP>"
+EXTERNAL_NET: "any"
+
+default-rule-path: /etc/suricata/rules
+rule-files:
+- "*.rules"
+
+# Global stats configuration
+stats:
+enabled: no
+
+# Linux high speed capture support
+af-packet:
+  - interface: enp0s3
+```
+
