@@ -32,3 +32,10 @@ af-packet:
   - interface: enp0s3
 ```
 
+4. Restart the Suricata service:
+```
+sudo systemctl restart suricata
+```
+
+
+
