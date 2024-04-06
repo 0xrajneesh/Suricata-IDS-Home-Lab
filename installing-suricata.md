@@ -25,11 +25,11 @@ rule-files:
 
 # Global stats configuration
 stats:
-enabled: no
+enabled: Yes
 
 # Linux high speed capture support
 af-packet:
-  - interface: enp0s3
+  - interface: eth0
 ```
 
 4. Restart the Suricata service:
