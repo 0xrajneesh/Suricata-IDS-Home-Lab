@@ -57,50 +57,37 @@ In this home-lab, we will cover:
 alert tcp any any -> any any (msg:"Nmap Service Version Detection Probe Detected"; flags:SA; sid:100005;)
 ```
 -  **Metasploit Exploit Payload Detection**: Craft a Suricata rule to detect Metasploit exploit payload traffic based on unique signatures or payloads commonly used in exploits.
-  ```alert tcp any any -> any any (msg:"Metasploit Exploit Payload Detected"; content:"<metasploit_payload>"; sid:100006;)
-```
+  ```alert tcp any any -> any any (msg:"Metasploit Exploit Payload Detected"; content:"<metasploit_payload>"; sid:100006;)```
 -  **Metasploit Reverse Shell Detection**: Develop a Suricata rule to detect Metasploit reverse shell connections by monitoring for outbound TCP connections to known attacker IP addresses.
-```alert tcp any any -> <attacker_ip> any (msg:"Metasploit Reverse Shell Connection Detected"; sid:100007;)
-```
+```alert tcp any any -> <attacker_ip> any (msg:"Metasploit Reverse Shell Connection Detected"; sid:100007;)```
 -  **Metasploit Meterpreter Communication Detection**: Create a Suricata rule to detect Meterpreter communication activities by analyzing HTTP or TCP traffic with characteristic Meterpreter payloads.
-  ```alert tcp any any -> any any (msg:"Meterpreter Communication Detected"; content:"<meterpreter_payload>"; sid:100008;)
-```
+  ```alert tcp any any -> any any (msg:"Meterpreter Communication Detected"; content:"<meterpreter_payload>"; sid:100008;)```
 - **Metasploit Credential Harvesting Detection**: Formulate a Suricata rule to detect Metasploit credential harvesting activities by monitoring for specific LDAP or SMB traffic patterns indicative of credential theft.
-  ```alert tcp any any -> any any (msg:"Metasploit Credential Harvesting Activity Detected"; content:"LDAP" content:"SMB"; sid:100009;)
-```
+  ```alert tcp any any -> any any (msg:"Metasploit Credential Harvesting Activity Detected"; content:"LDAP" content:"SMB"; sid:100009;)```
 
 ## 🧑‍💻Excercises- Web-based attacks
 
 -  **Web Server Enumeration Detection**: Develop a Suricata rule to detect Nmap web server enumeration attempts by monitoring for excessive HTTP GET requests to various URIs.
-```alert http any any -> any any (msg:"Web Server Enumeration Attempt Detected"; urilen:>100; threshold: type threshold, track by_src, count 10, seconds 60; sid:100010;)
-```
+```alert http any any -> any any (msg:"Web Server Enumeration Attempt Detected"; urilen:>100; threshold: type threshold, track by_src, count 10, seconds 60; sid:100010;)```
 -  **Web Application Vulnerability Scan Detection**: Create a Suricata rule to detect Nmap vulnerability scanning activities against web applications by monitoring for specific HTTP requests targeting common vulnerabilities (e.g., SQL injection, XSS).
-  ```alert http any any -> any any (msg:"Web Application Vulnerability Scan Detected"; content:"SQL Injection" content:"XSS"; sid:100011;)
-```
+  ```alert http any any -> any any (msg:"Web Application Vulnerability Scan Detected"; content:"SQL Injection" content:"XSS"; sid:100011;)```
 -  **Metasploit Web Application Exploitation Detection**: Formulate a Suricata rule to detect Metasploit web application exploitation attempts by monitoring for HTTP requests containing known exploit payloads (e.g., SQL injection, remote code execution).
-  ```alert http any any -> any any (msg:"Metasploit Web Application Exploitation Attempt Detected"; content:"<exploit_payload>"; sid:100012;)
-```
+  ```alert http any any -> any any (msg:"Metasploit Web Application Exploitation Attempt Detected"; content:"<exploit_payload>"; sid:100012;)```
 -  **Metasploit Command Injection Detection**: Develop a Suricata rule to detect Metasploit command injection attacks by monitoring for HTTP requests with suspicious command injection payloads in URI parameters or POST data.
-```alert http any any -> any any (msg:"Metasploit Command Injection Attempt Detected"; content:";"; sid:100013;)
-```
+```alert http any any -> any any (msg:"Metasploit Command Injection Attempt Detected"; content:";"; sid:100013;)```
 -  **Metasploit Directory Traversal Detection**: Create a Suricata rule to detect Metasploit directory traversal attempts by monitoring for HTTP requests with traversal patterns in URI paths.
   ```alert http any any -> any any (msg:"Metasploit Directory Traversal Attempt Detected"; content:"../"; sid:100014;)
 ```
 -  **Metasploit Cross-Site Scripting (XSS) Detection**: Formulate a Suricata rule to detect Metasploit XSS attacks by monitoring for HTTP responses containing characteristic XSS payloads or script injection patterns.
-  ```alert http any any -> any any (msg:"Metasploit XSS Attack Detected"; content:"<script>"; sid:100015;)
-```
+  ```alert http any any -> any any (msg:"Metasploit XSS Attack Detected"; content:"<script>"; sid:100015;)```
 - **Metasploit SQL Injection Detection**: Develop a Suricata rule to detect Metasploit SQL injection attacks by monitoring for SQL injection payloads in HTTP requests or SQL error messages in HTTP responses.
-```alert http any any -> any any (msg:"Metasploit SQL Injection Attempt Detected"; content:"SQL Error"; sid:100016;)
-```
+```alert http any any -> any any (msg:"Metasploit SQL Injection Attempt Detected"; content:"SQL Error"; sid:100016;)```
 - **Metasploit File Inclusion Detection**: Create a Suricata rule to detect Metasploit file inclusion attacks by monitoring for HTTP requests with suspicious file inclusion payloads in URI parameters or POST data.
-  ```alert http any any -> any any (msg:"Metasploit File Inclusion Attempt Detected"; content:"../../"; sid:100017;)
-```
+  ```alert http any any -> any any (msg:"Metasploit File Inclusion Attempt Detected"; content:"../../"; sid:100017;)```
 - **Metasploit Cross-Site Request Forgery (CSRF) Detection**: Formulate a Suricata rule to detect Metasploit CSRF attacks by monitoring for unexpected or unauthorized HTTP requests originating from victim hosts.
-```alert http any any -> any any (msg:"Metasploit CSRF Attack Detected"; content:"CSRF Token"; sid:100018;)
-```
+```alert http any any -> any any (msg:"Metasploit CSRF Attack Detected"; content:"CSRF Token"; sid:100018;)```
 - **Metasploit Authentication Bypass Detection**: Develop a Suricata rule to detect Metasploit authentication bypass attempts by monitoring for HTTP requests with bypass techniques (e.g., parameter manipulation, session fixation).
-  ```alert http any any -> any any (msg:"Metasploit Authentication Bypass Attempt Detected"; content:"Admin=true"; sid:100019;)
-```
+  ```alert http any any -> any any (msg:"Metasploit Authentication Bypass Attempt Detected"; content:"Admin=true"; sid:100019;)```
 
 ## Need Training
 
