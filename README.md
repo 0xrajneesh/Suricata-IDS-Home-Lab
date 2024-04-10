@@ -57,17 +57,26 @@ alert icmp any any -> any any (msg:"Nmap OS Fingerprinting Detected"; ttl: 64; c
 alert icmp any any -> any any (msg:"Nmap OS Fingerprinting Detected"; ttl: 128; content:"ECHO REPLY"; sid:100003;)
 ```
 -  **Nmap Service Version Detection Detection**: Formulate a Suricata rule to detect Nmap service version detection probes based on unique HTTP GET requests or TCP SYN/ACK packets.
-  ```alert tcp any any -> any any (msg:"Nmap Service Version Detection Probe Detected"; content:"GET"; http_method; sid:100004;)
+  ```yaml
+alert tcp any any -> any any (msg:"Nmap Service Version Detection Probe Detected"; content:"GET"; http_method; sid:100004;)
 alert tcp any any -> any any (msg:"Nmap Service Version Detection Probe Detected"; flags:SA; sid:100005;)
 ```
 -  **Metasploit Exploit Payload Detection**: Craft a Suricata rule to detect Metasploit exploit payload traffic based on unique signatures or payloads commonly used in exploits.
-  ```alert tcp any any -> any any (msg:"Metasploit Exploit Payload Detected"; content:"<metasploit_payload>"; sid:100006;)```
+  ```yaml
+alert tcp any any -> any any (msg:"Metasploit Exploit Payload Detected"; content:"<metasploit_payload>"; sid:100006;)
+```
 -  **Metasploit Reverse Shell Detection**: Develop a Suricata rule to detect Metasploit reverse shell connections by monitoring for outbound TCP connections to known attacker IP addresses.
-```alert tcp any any -> <attacker_ip> any (msg:"Metasploit Reverse Shell Connection Detected"; sid:100007;)```
+```yaml
+alert tcp any any -> <attacker_ip> any (msg:"Metasploit Reverse Shell Connection Detected"; sid:100007;)
+```
 -  **Metasploit Meterpreter Communication Detection**: Create a Suricata rule to detect Meterpreter communication activities by analyzing HTTP or TCP traffic with characteristic Meterpreter payloads.
-  ```alert tcp any any -> any any (msg:"Meterpreter Communication Detected"; content:"<meterpreter_payload>"; sid:100008;)```
+  ```yaml
+alert tcp any any -> any any (msg:"Meterpreter Communication Detected"; content:"<meterpreter_payload>"; sid:100008;)
+```
 - **Metasploit Credential Harvesting Detection**: Formulate a Suricata rule to detect Metasploit credential harvesting activities by monitoring for specific LDAP or SMB traffic patterns indicative of credential theft.
-  ```alert tcp any any -> any any (msg:"Metasploit Credential Harvesting Activity Detected"; content:"LDAP" content:"SMB"; sid:100009;)```
+  ```yaml
+  alert tcp any any -> any any (msg:"Metasploit Credential Harvesting Activity Detected"; content:"LDAP" content:"SMB"; sid:100009;)
+  ```
 
 ## 🧑‍💻Excercises- Web-based attacks
 
