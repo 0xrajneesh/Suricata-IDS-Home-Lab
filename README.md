@@ -51,8 +51,7 @@ In this home-lab, we will cover:
   ```alert tcp any any -> any any (msg:"Nmap Stealth Scan Detected"; flags:S; threshold: type threshold, track by_src, count 5, seconds 10; sid:100001;)```
 -  **Nmap OS Fingerprinting Detection**: Develop a Suricata rule to detect ICMP echo requests and responses with specific TTL values, characteristic of Nmap OS fingerprinting activities.
   ```alert icmp any any -> any any (msg:"Nmap OS Fingerprinting Detected"; ttl: 64; content:"ECHO REQUEST"; sid:100002;)
-alert icmp any any -> any any (msg:"Nmap OS Fingerprinting Detected"; ttl: 128; content:"ECHO REPLY"; sid:100003;)
-```
+alert icmp any any -> any any (msg:"Nmap OS Fingerprinting Detected"; ttl: 128; content:"ECHO REPLY"; sid:100003;)```
 -  **Nmap Service Version Detection Detection**: Formulate a Suricata rule to detect Nmap service version detection probes based on unique HTTP GET requests or TCP SYN/ACK packets.
   ```alert tcp any any -> any any (msg:"Nmap Service Version Detection Probe Detected"; content:"GET"; http_method; sid:100004;)
 alert tcp any any -> any any (msg:"Nmap Service Version Detection Probe Detected"; flags:SA; sid:100005;)
